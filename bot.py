@@ -57,6 +57,7 @@ def random_word(chat_id, about):
 	for i in range(1, randint(15, 25)):
 		local_bot.edit_message_text(chat_id=chat_id, message_id=message.message_id,
 			text='Ищем рандомное слово ' + moon[i%8])
+		time.sleep(0.2)
 	word = choice(lottery['word'])
 	local_bot.edit_message_text(chat_id=chat_id,message_id=message.message_id,
 	 text='🌚 '+word+ ' 🌝')
